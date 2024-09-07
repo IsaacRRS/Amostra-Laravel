@@ -1,9 +1,9 @@
 # Funcionamento básico LARAVEL
 
-### Resumo breve 💭
+### 💭 Resumo breve 
   Aqui você poderá ter uma ideia inicial da organização e funcionamento de um projeto em LARAVEL.
 
-## Requerimentos (caso opte por rodar a aplicação)
+## 📝 Requerimentos (caso opte por rodar a aplicação)
 
   > IDE de sua escolha (VScode, PhpStorm..)
 > 
@@ -23,4 +23,4 @@ laravel new (nome qualquer)
 ```
 🛂 Durante a instalação, será necessário informar o banco de dados que irá ser utilizado.
 
-## Explicação passo-a-passo
+## 🧑‍🏫 Explicação passo-a-passo
