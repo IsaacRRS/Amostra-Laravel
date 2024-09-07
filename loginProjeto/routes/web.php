@@ -13,3 +13,5 @@ Route::post('/login', [ControladorLogRegis::class, 'loginPost'])->name('login.po
 
 Route::get('/registration', [ControladorLogRegis::class, 'registration'])->name('registration');
 Route::post('/registration', [ControladorLogRegis::class, 'registrationPost'])->name('registration.post');
+
+Route::get('/logout', [ControladorLogRegis::class, 'logout'])->name('logout');

@@ -56,3 +56,13 @@ class ControladorLogRegis extends Controller
         return redirect(route('login'))->with("sucesso", "O registro foi um sucesso!");
     
     }
+
+    function logout(){
+
+        Session:flush();
+        Auth::logout();
+        return redirect(route('login'));
+
+    }
+
+}
