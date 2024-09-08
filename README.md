@@ -30,6 +30,13 @@ composer create-project --prefer-dist laravel/laravel nome-do-projeto
 
 ```
 
+#### ❗Comandos de verificação (Prompt de Comando)
+
+```
+composer -v
+laravel-v
+```
+
 ## 🧑‍🏫 Explicação dos componentes principais
 
 Em 'resources/views', você poderá inserir as telas e layouts de sua aplicação.
