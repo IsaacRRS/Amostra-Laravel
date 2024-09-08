@@ -24,3 +24,7 @@ laravel new (nome qualquer)
 🛂 Durante a instalação, será necessário informar o banco de dados que irá ser utilizado.
 
 ## 🧑‍🏫 Explicação passo-a-passo
+
+Em 'resources/views', você poderá inserir as telas e layouts de sua aplicação.
+
+Para cada função ou método, uma rota terá de ser definida, você poderá defini-lás em 'routes/web.php'.
