@@ -1,10 +1,10 @@
-@extends('telaLayouts')
-@section('titulo', 'Registro')
+@extends('telaLayouts') <!-- Trazendo o layout -->
+@section('titulo', 'Registro') <!-- Substituição do título -->
 @section('conteudo')
     <div class="container">
 
         <div class="mt-5">
-          @if($errors->any())
+          @if($errors->any()) <!-- Caso haja erros, exibirá cada um -->
             <div class="col-12">
               @foreach($errors->all() as $error)
                 <div class="alert alert-danger">{{$error}}</div>
@@ -12,18 +12,18 @@
             </div> 
           @endif
 
-          @if(session()->has('error'))
+          @if(session()->has('error')) <!-- Mensagem de erro -->
             <div class="alert alert-danger">{{session('error')}}</div>
           @endif
 
-          @if(session()->has('sucesso'))
+          @if(session()->has('sucesso')) <!-- Mensagem de sucesso -->
             <div class="alert alert-success">{{session('sucesso')}}</div>
           @endif
 
         </div>
         
-        <form action="{{route('registration.post')}}" method="POST" class="ms-auto me-auto mt-3" style="width: 500px">
-          @csrf
+        <form action="{{route('registro.post')}}" method="POST" class="ms-auto me-auto mt-3" style="width: 500px">
+          @csrf <!-- token -->
             <div class="mb-3">
                 <label class="form-label">Nome</label>
                 <input type="text" name="name" class="form-control">
