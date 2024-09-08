@@ -1,5 +1,5 @@
-@extends('telaLayouts')
-@section('titulo', 'Login')
+@extends('telaLayouts') <!-- Trazendo o layout -->
+@section('titulo', 'Login') <!-- Substituição do título -->
 @section('conteudo')
     <div class="container">
 
@@ -12,18 +12,18 @@
               </div> 
             @endif
   
-            @if(session()->has('error'))
+            @if(session()->has('error')) <!-- Mensagem de erro -->
               <div class="alert alert-danger">{{session('error')}}</div>
             @endif
   
-            @if(session()->has('sucesso'))
+            @if(session()->has('sucesso')) <!-- Mensagem de sucesso -->
               <div class="alert alert-success">{{session('sucesso')}}</div>
             @endif
   
           </div>
-
+          <!-- os dados irão para a rota login.post -->
         <form action="{{route('login.post')}}" method="POST" class="ms-auto me-auto mt-3" style="width: 500px">
-            @csrf
+            @csrf <!-- token -->
             <div class="mb-3">
               <label class="form-label">E-mail</label>
               <input name="email" type="email" class="form-control">

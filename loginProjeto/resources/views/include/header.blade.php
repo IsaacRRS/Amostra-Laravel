@@ -9,26 +9,27 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('login')}}">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('registration')}}">Registro</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('logout')}}">Sair</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Informações
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Item X</a></li>
-              <li><a class="dropdown-item" href="#">Item Y</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Item Z</a></li>
-            </ul>
-          </li>
+
+          @auth  <!-- Caso o usuário seja autorizado (logado), mostrará apenas a função Logout --->
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('logout')}}">Sair</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/perfil">Perfil</a>
+            </li>
+            
+          @else
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('login')}}">Login</a> <!-- Rota para a tela de login -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('registro')}}">Registro</a> <!-- Rota para a tela de registro -->
+            </li>
+
+          @endauth
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Busque" aria-label="Search">
@@ -37,3 +38,4 @@
       </div>
     </div>
   </nav>
+<p>@auth{{auth()->user()->name}}@endauth</p>
